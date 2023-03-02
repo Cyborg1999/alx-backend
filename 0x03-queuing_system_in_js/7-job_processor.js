@@ -12,8 +12,8 @@ const queue = createQueue();
  * @param {*} done
  */
 const sendNotification = (phoneNumber, message, job, done) => {
-  let total = 2, pending = 2;
-  let sendInterval = setInterval(() => {
+  const total = 2; let pending = 2;
+  const sendInterval = setInterval(() => {
     if (total - pending <= total / 2) {
       job.progress(total - pending, total);
     }
@@ -25,7 +25,7 @@ const sendNotification = (phoneNumber, message, job, done) => {
     if (total === pending) {
       console.log(
         `Sending notification to ${phoneNumber},`,
-        `with message: ${message}`,
+        `with message: ${message}`
       );
     }
     --pending || done();

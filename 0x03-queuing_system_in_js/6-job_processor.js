@@ -7,7 +7,7 @@ const sendNotification = (phoneNumber, message) => {
   console.log(
     `Sending notification to ${phoneNumber},`,
     'with message:',
-    message,
+    message
   );
 };
 

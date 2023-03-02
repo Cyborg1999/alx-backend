@@ -15,14 +15,14 @@ const printHash = (hashName) => {
   client.HGETALL(hashName, (_err, reply) => console.log(reply));
 };
 
-function main() {
+function main () {
   const hashObj = {
     Portland: 50,
     Seattle: 80,
     'New York': 20,
     Bogota: 20,
     Cali: 40,
-    Paris: 2,
+    Paris: 2
   };
   for (const [field, value] of Object.entries(hashObj)) {
     updateHash('HolbertonSchools', field, value);
